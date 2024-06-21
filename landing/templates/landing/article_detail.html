@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ article.judul }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'landing/styles.css' %}">
+    <style>
+       h1 {
+            color: #d4af37; /* Kode warna kuning emas */
+        }
+        .article {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .back-link {
+            color: #d4af37; /* Kode warna kuning emas */
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Research</a></li>
+            <li>
+                <a href="">Chatbot</a>
+            </li>
+            <li><a href="/admin/login/?next=/admin/">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="article">
+        <h1>{{ article.judul }}</h1>
+        <p><strong>Penulis:</strong> {{ article.penulis }}</p>
+        <p><strong>Publish Date:</strong> {{ article.publish_date }}</p>
+        <p>{{ article.abstrak }}</p>
+
+        <a class="back-link" href="{% url 'home' %}">Back to Home</a>
+    </div>
+  
+</body>
+</html>

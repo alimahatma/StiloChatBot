@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'landing/style-chatbot.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body> 
+    <h1>Chatbot STMIK Lombok</h1>
+    <div>
+        <div id="chatbot">
+            <p id="botText"><span>Hello, Apakah yang saya dapat bantu?</span></p>
+            <p id="botText"><span>Silahkan masukkan informasi yang anda inginkan.!</span></p>
+        </div>
+
+        <div class="userInput">
+            <input type="text" id="textInput" name="userMessage" placeholder="Type your message">
+            <input type="submit" value= "Sent." id="buttonInput"><br>
+            
+        </div>
+        
+    </div>
+
+    <script>
+        function getUserResponse(){
+            var userText = $('#textInput').val();
+            if (userText.trim()!==""){
+                var userHTML = "<p class='userText'>User: <span>"+userText+"</span></p>"
+                $('#textInput').val("");
+                $('#chatbot').append(userHTML);
+            }
+        }
+
+        $(document).ready(function(){
+            $('#buttonInput').click(function(){
+                getUserResponse()
+            });
+
+            $('#textInput').keypress(function(event){
+                if (event.which===13){
+                    event.preventDefault();
+                    getUserResponse();
+                }
+            });
+        });
+
+       
+    </script>   
+    
+    
+</body>
+</html>

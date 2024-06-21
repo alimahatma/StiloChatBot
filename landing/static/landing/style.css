@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    margin: 0;
+}
+
+header{
+    width: 100%;
+    background-color: #d4af37;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+nav {
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    padding: 40px;
+    height: 100vh;
+    float: left;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a:active {
+    color: #d4af37;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+h1 {
+    color: #fff;
+}
+h2 {
+    color: #d4af37;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-header {
+    background-color: #d4af37;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+} 
+
+.card-body {
+    padding: 10px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #d4af37;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3 ease;
+}
+
+.read-more:hover{
+    background-color: #b8860b;
+}
+
+.back-link {
+    color: #d4af37;
+    text-decoration: none;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 40px;
+    text-align: center;
+    clear: both;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer .col{
+    flex: 1;
+    min-width: 250px;
+    margin: 20px 0;
+}
+
+.footer h4 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #f1c40f;
+}
+
+.footer .social-icon {
+    list-style: none;
+    padding: 0;
+}
+
+
+.footer .social-icon a {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
+}
